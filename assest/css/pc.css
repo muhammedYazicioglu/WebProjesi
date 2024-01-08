@@ -1,0 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.logo{
+    width: 120px;
+    height: 75px;
+}
+
+.nav-bar-konum{
+    padding-top: 15px;
+}
+.icerik{
+    margin-top: 50px;
+}
+
+.icerik div{
+    padding-top: 20px;
+}
+.kayitBtn{
+    padding-left: 40px  ;
+   
+}
+.btn{
+    border: 0px;
+    color: aqua;
+    font-size: 20px;
+}

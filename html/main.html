@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assest/css/slider.css">
+  <link rel="stylesheet" href="../assest/css/slider2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../assest/css/Main.css">
+  <title>Main</title>
+</head>
+
+<body>
+  <div class="container-md">
+    <div class="baslik">
+      <div class="row">
+        <div class="col-md-6"><img src="../assest/img/baslik/logo.jpg" alt="logo" class="logo"></div>
+        <div class="col-md-6 nav-bar-konum">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../html/main.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mobil<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/pc.html">Bilgisayar<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hakkımızda<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+      </div>
+    </div>
+    <div class="icerik">
+      <div class="slider">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"><img src="../assest/img/slider-img/galaxy-s-23-ultra.jpg"
+                      alt="s23+"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="../assest/img/slider-img/galaxy-z-flip-5.jpg"
+                      alt="zflip5"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="../assest/img/slider-img/galaxy-z-fold-5.jpg"
+                      alt="zfodl5"></a></div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--slider 1 js kodları-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+          const progressCircle = document.querySelector(".autoplay-progress svg");
+          const progressContent = document.querySelector(".autoplay-progress span");
+          var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev"
+            },
+            on: {
+              autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+              }
+            }
+          });
+        </script>
+        <!--slider 1 js kodları-->
+      </div>
+
+      <div class="kartlar">
+        <p class="bgoc">Bu Gün Öne Çıkanlar</p>
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/i5-10400.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/sm-a23.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/sm-s23plus.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/sm-tab-s9.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/i5-10400.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/sm-a23.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/sm-s23plus.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="../assest/img/OneCikanUrunler/sm-tab-s9.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row swiper-div">
+        <div class="col-md-12"> <!-- Swiper -->
+
+          <div #swiperRef="" class="swiper urunler-Swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box"><a href=""><img src="../assest/img/OneCikanUrunler/sm-s23plus.jpg"
+                    alt=""></a>
+              </div>
+              <div class="swiper-slide box"><a href=""><img src="../assest/img/OneCikanUrunler/sm-tab-s9.jpg"
+                    alt=""></a>
+              </div>
+              <div class="swiper-slide box"><a href=""><img src="../assest/img/OneCikanUrunler/sm-a23.jpg" alt=""></a>
+              </div>
+              <div class="swiper-slide box"><a href=""><img src="../assest/img/OneCikanUrunler/i5-10400.jpg" alt=""></a>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".urunler-Swiper", {
+              slidesPerView: 3,
+              centeredSlides: true,
+              spaceBetween: 30,
+              pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+
+
+          </script>
+        </div>
+      </div>
+      <div class="markalar-div">
+        <div class="row">
+          <p class="markalar-baslik"> MARKALAR</p>
+        </div>
+        <div class="row markalar">
+          <div class="col-md-3"><img src="../assest/img/markalar/asus-icon.png" alt=""></div>
+          <div class="col-md-3"><img src="../assest/img/markalar/samsung-icon.png" alt=""></div>
+          <div class="col-md-3"><img src="../assest/img/markalar/asus-icon.png" alt=""></div>
+          <div class="col-md-3"><img src="../assest/img/markalar/samsung-icon.png" alt=""></div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <!--şüpheli-->
+  </div>
+  <!--şüpheli-->
+  <div class="container-fluid">
+    <div class="row socil-media">
+      <div class="col-md-6">
+        <p class="social-media-text">Bizi Takip Edin</p>
+      </div>
+      <div class="col-md-6">
+        <img src="../assest/img/sosyal-medya/facebook.png" alt="">
+        <img src="../assest/img/sosyal-medya/instagram.png" alt="">
+        <img src="../assest/img/sosyal-medya/linkedin.png" alt="">
+        <img src="../assest/img/sosyal-medya/twitter.png" alt="">
+        <img src="../assest/img/sosyal-medya/youtube.png" alt="">
+      </div>
+
+
+    </div>
+    <div class="row">
+      <section class="footer">
+
+        <div class="box-container">
+
+          <div class="box">
+            <h1>hakkında</h1> <!-----about------>
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam eaque facilis nostrum veniam
+                soluta expedita.
+                Maxime architecto dicta nisi sapiente in, nostrum ipsa nam numquam asperiores quisquam temporibus
+                possimus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam eaque facilis nostrum veniam
+                soluta expedita.
+              </p>
+            </div>
+            <div class="icon">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="box">
+            <h1>iletişim bilgileri</h1> <!-----contack info------>
+            <div class="icons">
+              <a href="#"><i class="fas fa-map-marker-alt"></i>Demirkapı mahallesi , İstanbul , Türkiye </a>
+              <a href="#"><i class="fas fa-phone-alt"></i>+0552 700 34 69</a>
+              <a href="#"><i class="fas fa-envelope"></i>m4418442@gamil.com</a>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d3012.400922050434!2d29.1492603!3d40.972701!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x14caa4dce85089af%3A0x46f296df7a32e87b!2sBarbaros%2C%20Abdurrahman%20ve%20Nermin%20Bilimli%20Mesleki%20ve%20Teknik%20Anadolu%20Lisesi%2C%20205.%20Sokak%2C%20Ba%C4%9Fc%C4%B1lar%2F%C4%B0stanbul!3m2!1d41.0240988!2d28.8401547!4m0!5e0!3m2!1str!2str!4v1704725432783!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+
+          <div class="box">
+            <h1>Linkler </h1> <!-----quick links------>
+            <div class="icons">
+              <a href="../html/main.html">Anasayfa</a>
+              <a href="#">Hakkımızda</a>
+              <a href="#">İletişim</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="credit">created by <span>Muhammed Ali Yazıcıoğlu</span> / all right reseverd</div>
+    </div>
+    </section>
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
